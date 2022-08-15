@@ -70,8 +70,16 @@
       Sequential:  Line by line
 
       Conditional: If - else
+                   Sample:
+                       If XXXX Then
+                           ........
+                       End If
   
       Loop:        Loop
+                   For loop sample:
+                        For i = 1 To 10
+                            .......
+                        Next i
   
     Arrays:
       
@@ -107,4 +115,7 @@
   
     Objects: contain properties that describe static information and methods that can operate on objects.
     
-      
+    Codes happens in Sub structure:
+                   Sub MyCode()
+                   ........
+                   End Sub
