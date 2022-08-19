@@ -249,6 +249,36 @@
 
 	End: Kill all current running VBA processes
 
+	Subprocedure Definition with Parameters: 
+		Integer Sample:
+			Sub CustomLog (num As Double, base As Integer)
+				Debug.Print Log(num) / Log(base)
+			End Sub
+
+			While Calling:
+				Sub Main()
+					CustomLog 100, 10 //While calling the Sub, we can use PARAMETER := ACTUAL VALUE  
+                                                                                                     Sample: CustomLog num := 100, base := 10 
+				End Sub
+
+			Usage of optional parameters: Optional PARAMETER As DATA TYPE
+				Sample:
+				Sub CustomLog (num As Double, Optional base As Integer)
+					.....
+				End Sub
+					
+			After the optional parameters are set, if they are used in sub-processes, 
+			it is necessary to determine whether the parameters are provided or not. 
+			Otherwise, when it is not provided and used directly, the program will make an error.
+			Optional PARAMETER As DATA TYPE = VALUE
+			
+			Optional Parameter must be at the end of definition, otherwise, codes may cause an error
+
+		ByVal: Pass parameter's value                      Sub Test1(ByVal text As String)           Keep the father's value no change
+		ByRef:	 Pass parameter by reference           Sub Test2(ByRef text As String)          Change the father's value
+		
+		Default passing type is ByRef
+
       Function:
 	
 	No Parameter Function:
